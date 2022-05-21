@@ -1,3 +1,6 @@
+<?php
+require_once("functions/functions.php");
+?>
 <!DOCTYPE html>
 <html lang="de" class="h-100">
 <head>
@@ -23,28 +26,19 @@ include("includes/navbar.php");
         <div class="row">
             <div class="col-md-8">
                 <div class="pb-3">
+                    <div class="btn-group" style="margin: 10px;">
+                        <a href="?option=" <?php if(isset($_GET['option'])){ echo 'class="btn btn-dark"'; }else{ echo 'class="btn btn-dark active" aria-current="page"';}?>>Die drei ???</a>
+                        <a href="?option=kids" <?php if($_GET['option'] == "kids"){ echo 'class="btn btn-dark active" aria-current="page"'; }else{ echo 'class="btn btn-dark"';}?>>Die drei ??? - Kids</a>
+                        <a href="?option=dr3i" <?php if($_GET['option'] == "dr3i"){ echo 'class="btn btn-dark active" aria-current="page"'; }else{ echo 'class="btn btn-dark"';}?>>Die Dr3i</a>
+                    </div>
                     <?php
-                    $string_json = "https://api.citroncode.com/android/ddf/v4/folgen_php.json";
-                    $folgen_liste = array();
-
-                    $array = json_decode(file_get_contents($string_json));
-
-                    foreach ($array as $key => $jsons) { // This will search in the 2 jsons
-                        foreach($jsons as $key => $value) {
-                            if($key == 'spotify'){
-                                if(str_contains($value,"https://")){
-                                    $url_segment_one = explode("/album/", $value);
-                                    $url_segment_two = explode("?si", $url_segment_one[1]);
-                                    $folgen_liste[] = $url_segment_two[0];
-                                }else{
-                                    $folgen_liste[] = $value;
-                                }
-
-                            }
-                        }
-                    }
-                    $folge = $folgen_liste[array_rand($folgen_liste)];
-                    echo '<iframe src="https://open.spotify.com/embed/album/' .$folge .'" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+                   if($_GET['option'] == "dr3i"){
+                        echo diedr3i("https://api.citroncode.com/android/ddf/v5/folgen_dd_php.json");
+                   }else if($_GET['option'] == "kids"){
+                        echo selectFromSpotify("https://api.citroncode.com/android/ddf/v5/folgen_kids_php.json");
+                   }else{
+                         echo selectFromSpotify("https://api.citroncode.com/android/ddf/v4/folgen_php.json");
+                   }
                     ?>
 
                     <div class="d-flex justify-content-center">
@@ -82,7 +76,6 @@ include("includes/navbar.php");
                         </p>
                     </div>
                 </div>
-
 
             </div>
         </div>
