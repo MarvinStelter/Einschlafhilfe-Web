@@ -28,11 +28,6 @@ include("includes/navbar.php");
             Telefon: +49 1786882280<br>
             <a href="mailto:stelter.marv@gmail.com">stelter.marv@gmail.com</a> oder <a href="mailto:info@citroncode.com">info@citroncode.com</a></p>
 
-        <p>Wir nutzen ein Cookie, eine Textdatei, um die Spracheinstellung
-            zu speichern. Der Cookie wird nach einem Monat automatisch gel&ouml;scht und wird
-            ausschlie&szlig;lich im Browser gespeichert.<br>
-            Dar&uuml;ber hinaus nutzen wir keine Cookies. </p>
-
         <p>Unser Provider erhebt Nutzungsdaten der Website. <br>
             Diese Daten enthalten die aufgerufene Seite, die &uuml;bertragene Datenmenge, Datum
             und Uhrzeit, die zuvor besuchte Seite (falls zutreffend), der verwendete
@@ -53,11 +48,7 @@ include("includes/navbar.php");
 
         <h3>Inhalte von Dritten:</h3>
 
-        <p>F&uuml;r eingebundene Youtube-Videos werden u.U. Cookies gesetzt,
-            es gelten daf&uuml;r die <a href="https://policies.google.com/privacy">Cookie-Richtlinien
-                von Youtube und Google</a>.</p>
-
-        <p>Diese Seite nutzt jQuery und Bootstrap, die von externen Servern geladen werden.</p>
+        <p>Diese Seite nutzt jQuery und Bootstrap, die von externen Servern geladen werden. Die Datenschutzerklärung dazu findest du <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">hier</a>.</p>
 
         <p>Diese Seite nutzt die Spotify API, wie Spotify deine Daten verarbeitest kannst du in der Datenschutzerklärung von Spotify nachlesen. Diese findest du <a href="https://www.spotify.com/de/legal/privacy-policy/">hier</a>.</p>
     </div>
