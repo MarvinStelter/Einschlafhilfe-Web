@@ -10,7 +10,7 @@ Webversion der Android App: "Die drei Fragezeichen Einschlafhilfe"
 </p>
 
 # Preview
-Die Webversion kann <a href="https://api.citroncode.com/android/ddf/web2/">hier</a> getestet werden.
+Die Webversion kann <a href="https://ddf-einschlafhilfe.de//">hier</a> getestet werden.
 
 # Thanks to
 
